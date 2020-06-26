@@ -9,5 +9,9 @@
   <%= f.text_field :artist_name %>
   <br />
 
+  <%= f.label :genre_id %>
+  <%= f.select :genre_id, options_for_select(Genre.all.collect{|u| [u.name, u.id] }) %>
+  <br />
+
   <%= f.submit %>
 <% end %>
