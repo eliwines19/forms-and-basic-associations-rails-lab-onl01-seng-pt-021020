@@ -15,7 +15,7 @@ class Song < ActiveRecord::Base
 
   def notes=(notes)
     notes.each do |content|
-      notes = Note.create(content: content)
+      note = Note.create(content: content)
       self.notes << note
     end
   end
