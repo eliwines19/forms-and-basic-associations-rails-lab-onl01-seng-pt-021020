@@ -11,4 +11,7 @@ class Song < ActiveRecord::Base
   def artist_name
     self.artist ? self.artist_name : nil
   end
+
+
+  def notes=(notes)
 end
